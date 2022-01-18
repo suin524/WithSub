@@ -11,7 +11,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/edit_message"
@@ -26,20 +25,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:onClick="sendMessage"
         android:text="@string/button_send"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/Aging"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="48dp"
         android:backgroundTint="@color/purple_200"
         android:insetBottom="1dp"
@@ -48,17 +48,17 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:cornerRadius="500dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/muscles"
+        app:layout_constraintEnd_toStartOf="@+id/Eyesight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Eyesight"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="55dp"
         android:backgroundTint="@color/purple_200"
         android:insetBottom="1dp"
@@ -67,14 +67,14 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:cornerRadius="500dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/Energy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintStart_toEndOf="@+id/Aging"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UnknownId" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/muscles"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="55dp"
@@ -88,14 +88,14 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:cornerRadius="500dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/Immunity"
+        app:layout_constraintEnd_toStartOf="@+id/Energy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/Aging"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Energy"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginTop="20dp"
@@ -107,29 +107,32 @@
         android:textAlignment="center"
         android:textSize="20sp"
         app:cornerRadius="500dp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/muscles"
+        app:layout_constraintTop_toBottomOf="@+id/Eyesight"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Immunity"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="61dp"
         android:backgroundTint="@color/purple_200"
         android:onClick="onButtonClick"
         android:text="면역력"
         android:textAlignment="center"
         android:textSize="20sp"
         app:cornerRadius="500dp"
+        app:layout_constraintEnd_toStartOf="@+id/weight"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/muscles"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/weight"
         android:layout_width="120dp"
         android:layout_height="130dp"
         android:layout_marginTop="20dp"
@@ -141,6 +144,21 @@
         android:textSize="20sp"
         app:cornerRadius="500dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/Immunity"
+        app:layout_constraintTop_toBottomOf="@+id/Energy"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/goto_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:onClick="gotoLogin"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
