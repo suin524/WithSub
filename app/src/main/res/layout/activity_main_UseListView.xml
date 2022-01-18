@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2EEE5"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/edit_message"
+        android:inputType="textPersonName"
+        android:imeOptions="actionSearch"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E5C1C5"
+        android:onClick="sendMessage"
+        android:text="@string/button_send"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview1"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:choiceMode="singleChoice" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Aging"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="#E5C1C5"
+            android:insetBottom="1dp"
+            android:onClick="onButtonClick"
+            android:text="노화"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintBottom_toTopOf="@+id/muscles"
+            app:layout_constraintEnd_toStartOf="@+id/Eyesight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/Eyesight"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="55dp"
+            android:backgroundTint="#E5C1C5"
+            android:insetBottom="1dp"
+            android:onClick="onButtonClick"
+            android:text="시력"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintBottom_toTopOf="@+id/Energy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Aging"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/muscles"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#E5C1C5"
+            android:insetBottom="1dp"
+            android:onClick="onButtonClick"
+            android:text="골격근"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintBottom_toTopOf="@+id/Immunity"
+            app:layout_constraintEnd_toStartOf="@+id/Energy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Aging"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/Energy"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#E5C1C5"
+            android:onClick="onButtonClick"
+            android:text="에너지"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintBottom_toTopOf="@+id/weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Eyesight"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Immunity"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#E5C1C5"
+            android:onClick="onButtonClick"
+            android:text="면역력"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/muscles"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/weight"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="55dp"
+            android:backgroundTint="#E5C1C5"
+            android:onClick="onButtonClick"
+            android:text="체중감량"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:cornerRadius="500dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Energy"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+</LinearLayout>
