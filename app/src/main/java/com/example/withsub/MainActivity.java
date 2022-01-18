@@ -19,11 +19,24 @@ import com.example.withsub.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.WithSub.MESSAGE";
+    private TextView tv_id, tv_pass, tv_name, tv_age;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("userID");
+        String userPass = intent.getStringExtra("userPass");
+        String userName = intent.getStringExtra("userName");
+        String userAge = intent.getStringExtra("userAge");
+
+
+        tv_id.setText(userID);
+        tv_pass.setText(userPass);
+        tv_name.setText(userName);
+        tv_age.setText(userAge);
     }
 
     /** Called when the user taps the Send button */
