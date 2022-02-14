@@ -7,10 +7,10 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-class RegisterRequest extends StringRequest {
+public class RegisterRequest extends StringRequest {
 
     //서버 URL 설정(php 파일 연동)
-    final static private String URL = "http://suinhosting.dothome.co.kr/Register.php";
+    final static private String URL = "http://닷호스트홈 /Register.php";
     private Map<String, String> map;
     //private Map<String, String>parameters;
 

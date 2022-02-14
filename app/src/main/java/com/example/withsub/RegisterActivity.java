@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
@@ -21,7 +19,7 @@ import org.json.JSONObject;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText et_id, et_pass, et_name, et_age;
-    private Button btn_register;
+    private Button btn_register2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         //회원가입 버튼 클릭 시 수행
-        btn_register = findViewById( R.id.btn_register );
-        btn_register.setOnClickListener( new View.OnClickListener() {
+        btn_register2 = findViewById( R.id.btn_register2 );
+        btn_register2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String userID = et_id.getText().toString();
@@ -51,19 +49,19 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
+                            JSONObject jsonObject = new JSONObject( response );
+                            boolean success = jsonObject.getBoolean( "success" );
 
                             //회원가입 성공시
-                            if (success) {
+                            if(success) {
 
-                                Toast.makeText(getApplicationContext(), "성공", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                startActivity(intent);
+                                Toast.makeText( getApplicationContext(), "성공", Toast.LENGTH_SHORT ).show();
+                                Intent intent = new Intent( RegisterActivity.this, LoginActivity.class );
+                                startActivity( intent );
 
                                 //회원가입 실패시
                             } else {
-                                Toast.makeText(getApplicationContext(), "실패", Toast.LENGTH_SHORT).show();
+                                Toast.makeText( getApplicationContext(), "실패", Toast.LENGTH_SHORT ).show();
                                 return;
                             }
 
