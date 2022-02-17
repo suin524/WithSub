@@ -8,11 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
-
-    //서버 URL 설정(php 파일 연동)
-    final static private String URL = "http://닷호스트홈 /Register.php";
+    // 서버 URL 설정 (PHP파일 연동)
+    final static private String URL ="http://suinhosting.dothome.co.kr/Register.php";
     private Map<String, String> map;
-    //private Map<String, String>parameters;
 
     public RegisterRequest(String userID, String userPassword, String userName, int userAge, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
@@ -25,7 +23,7 @@ public class RegisterRequest extends StringRequest {
     }
 
     @Override
-    protected Map<String, String>getParams() throws AuthFailureError {
+    protected Map<String, String> getParams() throws AuthFailureError {
         return map;
     }
 }

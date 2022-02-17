@@ -34,7 +34,13 @@
         <activity android:name=".DisplayButton1Activity"/>
         <activity android:name=".DisplayImmunityActivity"/>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginRequest"
+            tools:ignore="Instantiatable" />
         <activity android:name=".RegisterActivity"/>
+        <activity android:name=".RegisterRequest"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ValidateRequest"
+            tools:ignore="Instantiatable" />
 
         <!-- 여기서부턴 수빈언니 페이지 -->
         <activity android:name=".MenuActivity"/>
