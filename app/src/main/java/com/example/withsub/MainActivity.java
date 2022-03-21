@@ -104,6 +104,7 @@ class Material {
     String material = ""; // 원료 material
     int img; // 원료 이미지
     String effect = ""; // 효과
+    
     public Material(String material, int img, String effect) {
         super();
         this.material = material;
